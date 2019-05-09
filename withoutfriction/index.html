@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<title>Without Friction</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w_style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cormorant+Garamond">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (TITLE) */
+.bgimg-1 {
+    background-image: url('images/parallax1.jpg');
+    min-height: 100%;
+}
+
+/* Second image () */
+.bgimg-2 {
+    background-image: url("images/parallax2.jpg");
+    min-height: 400px;
+}
+
+/* Third image () */
+.bgimg-3 {
+    background-image: url("images/parallax3.jpg");
+    min-height: 400px;
+}
+
+/* Third image () */
+.bgimg-4 {
+    background-image: url("images/parallax4.jpg");
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+        min-height: 400px;
+    }
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">Without Friction</a>
+    <a href="#video" class="w3-bar-item w3-button w3-hide-small">Video</a>
+    <a href="#foreword" class="w3-bar-item w3-button w3-hide-small">Foreword</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#video" class="w3-bar-item w3-button" onclick="toggleFunction()">Video</a>
+    <a href="#foreword" class="w3-bar-item w3-button" onclick="toggleFunction()">Foreword</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Without Friction</span>
+  </div>
+</div>
+
+<div class="w3-content w3-container w3-padding-64">
+  <section>
+  <h3 class="w3-centered">In a near future, inside a virtual fragmented landscape, artificial intelligence is trying to interpret events that led to abandonment of network capitalism. </h3>
+</section>
+</div>
+
+
+<!-- Second Parallax Image with Video -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">Data as capital.</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+
+<div id="video">
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/295750686?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+</div>
+<!-- Third Parallax Image with x Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">Financial abstraction.</span>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="foreword">
+<section>
+  <h3 class="w3-center">Foreword by artist Timo Bredenberg</h3>
+  <p> Without friction is a fictional video work that is based on artistic research done in New York during <a href="http://fciny.org/residency/timo-bredenberg">FCINY residency</a> in January-February 2018.
+    Sources for research included digital archives of <a href="https://www.moaf.org/">Museum of American Finance</a> and video interviews of finance professionals documented
+    by <a href="https://www.nyhistory.org/library/oral-histories/remembering-wall-st">New York Historical Society</a>. In addition to these institutions New York public space
+    functioned as an important urban archive for the project.
+  <p/>
+  <p> I shot digital photographs of different buildings, memorial plaques and interiors related to finance and technology
+    such as New York Stock Exchange, NY Federal Reserve, The Western Union Telegraph co, House of Morgan, Rockefeller Center and so on. From these photographs I created virtual
+    3D models, using photogrammetry, that function as a scenery for the economic science fiction narrative. First part of the work also introduces hand trading signals formerly used
+    in stock exchanges, captured and digitalized using motion tracking technology.
+    <p/>
+    <p>
+    The title of the work Without Friction is a reference to a concept of ‘friction free capitalism’, coined by former Microsoft CEO Bill Gates.
+    The narrative is built around different polarities and tensions found in network capitalism. Topics include the diminishing role of human labour, distribution
+    and accumulation of information and capital as well as the accelerating financial technologies. Different historical events and places related to developments of
+    finance technologies mix up with more recent discourses.
+    </p>
+    <p>
+      The work is split into four parts all highlighting different aspects of these developments during last century and the beginning of current century.
+      First part is about the replacement of human traders and physical places of trading. Second part is about accumulation and distribution of data capital
+      and third about increasing complexity its relation to power and control. Fourth part speculates on possible end scenarios drawing from current debates
+      and historical events such as the anarchist bombing that happened in 1920 on Wall Street.
+    </p>
+
+  <p>Supported by <a href="http://www.taike.fi/en/frontpage">Arts Promotion Centre Finland</a> & <a href="http://fciny.org/">Finnish Cultural Institute in New York</a></p>
+</section>
+</div>
+
+
+<div class="bgimg-4 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">Distributional conflict.</span>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+<p>&copy; 2018 <a href="http://www.timobredenberg.com">Timo Bredenberg</a></p>
+
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
+
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
