@@ -65,6 +65,7 @@ a:active {
   'header header header'
   'content1 content2 content2'
   'footer footer footer';
+  width: 100%;
 }
 
 .grid-container > div {
