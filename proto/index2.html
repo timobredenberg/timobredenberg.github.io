@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="media art, artist, contemporary art" />
+    <meta name="author" content="Timo Bredenberg" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Cormorant+Garamond"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Timo Bredenberg - Visual artist</title>
+  </head>
+  <body>
+    <canvas id="myCanvas"></canvas>
+
+    <script src="three.js"></script>
+    <script src="GLTFLoader.js"></script>
+
+    <script>
+      var renderer,
+        scene,
+        camera,
+        myCanvas = document.getElementById("myCanvas");
+
+      //RENDERER
+      renderer = new THREE.WebGLRenderer({
+        canvas: myCanvas,
+        antialias: true,
+      });
+      renderer.setClearColor(0x000000);
+      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.setSize(window.innerWidth, window.innerHeight);
+
+      //CAMERA
+      camera = new THREE.PerspectiveCamera(
+        35,
+        window.innerWidth / window.innerHeight,
+        0.1,
+        1000
+      );
+
+      //SCENE
+      scene = new THREE.Scene();
+
+      //LIGHTS
+      var light = new THREE.AmbientLight(0xffffff, 0.5);
+      scene.add(light);
+
+      var light2 = new THREE.PointLight(0xffffff, 0.5);
+      scene.add(light2);
+
+      var loader = new THREE.GLTFLoader();
+
+      loader.load("proto.glb", handle_load);
+
+      var mesh;
+
+      function handle_load(gltf) {
+        console.log(gltf);
+        mesh = gltf.scene;
+        console.log(mesh.children[0]);
+        // mesh.children[0].material = new THREE.MeshLambertMaterial();
+        scene.add(mesh);
+        mesh.position.z = -10;
+      }
+
+      //RENDER LOOP
+      render();
+
+      var delta = 0;
+      var prevTime = Date.now();
+
+      function render() {
+        delta += 0.1;
+
+        if (mesh) {
+          mesh.rotation.y += 0.01;
+
+          //animation mesh
+          // mesh.morphTargetInfluences[ 0 ] = Math.sin(delta) * 20.0;
+        }
+
+        renderer.render(scene, camera);
+
+        requestAnimationFrame(render);
+      }
+    </script>
+
+    <div class="grid-container">
+      <div class="item_h">
+        <h1>Timo Bredenberg</h1>
+      </div>
+      <div class="item_c1">
+        <h2>Bio</h2>
+        Visual artist Timo Bredenberg works and lives in Tampere, Finland. In
+        his work he has explored internet communities and movements using
+        methods from found footage cut-up to virtual deriv&eacute;. Recently he
+        has been interested in network economies, their material pre-conditions
+        and algorithms.
+      </div>
+      <div class="item_c2">
+        <h2>News</h2>
+        <p>Upcoming show: 08/2020 Hippolyte Studio, Helsinki.</p>
+        <p>
+          Without Friction, online work.
+          <a href="https://timobredenberg.github.io/withoutfriction/index.html">
+            Here.</a
+          >
+        </p>
+        <p>
+          Short
+          <a href="http://fciny.org/residency/timo-bredenberg">article </a>about
+          my residency in FCINY
+        </p>
+      </div>
+      <div class="item_f">
+        <p>
+          <a href="bredenberg_cv.pdf">CV </a> |
+          <a href="bredenberg_portfolio.pdf">Portfolio</a> |
+          <a href="https://vimeo.com/bredenberg">Vimeo</a> |
+          <a href="https://www.instagram.com/timobredenberg/">Instagram</a> |
+          <a href="https://www.linkedin.com/in/timo-bredenberg/">Linkedin</a>
+        </p>
+        <p>Contact: timo . bredenberg {at} gmail .com</p>
+      </div>
+    </div>
+  </body>
+</html>
