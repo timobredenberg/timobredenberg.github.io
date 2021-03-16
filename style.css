@@ -74,7 +74,7 @@ a:active {
 
 /* Arrange grid on mobile */
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 768px) {
   .grid-container {
     grid-template-columns: auto;
     grid-template-areas:
