@@ -55,7 +55,7 @@ a:active {
 
 .grid-container {
   background: rgba(0, 0, 0, 0.5);
-  padding: 5px;
+  padding: 2%;
   display: grid;
   justify-content: space-evenly;
   position: fixed;
