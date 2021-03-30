@@ -1,3 +1,2 @@
 # timobredenberg.github.io
-Timo Bredenberg - Website
-
+Timo Bredenberg - Artist portfolio
