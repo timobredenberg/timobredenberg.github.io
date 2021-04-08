@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -11,76 +11,91 @@ html {
 }
 
 body {
-    margin: 0;
-    font-family: 'Cormorant Garamond', serif;
-    color: #f1f1f1;
-    font-size: 16px;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  color: #f1f1f1;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: normal;
 }
 
 h1 {
-  font-size: 1.4em;
-  line-height: 1.4em
-  text-decoration: underline;
+  font-size: 5em;
+  line-height: 1em;
+  text-decoration: none;
 }
 
 h2 {
-  font-size: 1.1em;
-  text-decoration: underline;
+  font-size: 2.5em;
+  text-decoration: none;
 }
 
 a:link {
-   color: #cfbd91;
-   text-decoration: none;
+  color: #cfbd91;
+  text-decoration: none;
 }
 a:visited {
-   color: #cfbd91;
+  color: #cfbd91;
 }
 a:hover {
-   color: #fff;
+  color: #fff;
 }
 a:active {
-   color: #fff;
+  color: #fff;
 }
 
 /* Content */
 
 /* Grid */
 
-.item_h { grid-area: header;}
-.item_c1 { grid-area: content1; }
-.item_c2 { grid-area: content2; }
-/* .item_c3 { grid-area: content3; }  example*/
-.item_f { grid-area: footer; }
+header {
+  grid-area: header;
+}
+.item_c1 {
+  grid-area: content1;
+}
+.item_c2 {
+  grid-area: content2;
+}
 
+footer {
+  grid-area: footer;
+}
 
 .grid-container {
-  background: rgba(0, 0, 0, 0.5);
+  /*background: rgba(0, 0, 0, 0.5);*/
   padding: 2%;
   display: grid;
-  justify-content: space-evenly;
+  grid-template-columns: repeat(3, 1fr);
   position: fixed;
   bottom: 0;
-  grid-template-columns: 25% 35% 40%;
   grid-template-areas:
-  'header header header'
-  'content1 content2 content2'
-  'footer footer footer';
-  width: 100%;
+    "header header header"
+    "content1 content2 content2"
+    "footer footer footer";
 }
 
 .grid-container > div {
-  padding: 10px;
+  padding: 2em;
 }
 
 /* Arrange grid on mobile */
 
 @media only screen and (max-width: 768px) {
   .grid-container {
+    position: relative;
+    width: 100vw;
     grid-template-columns: auto;
     grid-template-areas:
-    'header'
-    'content1'
-    'content2'
-    'footer';
+      "header"
+      "content1"
+      "content2"
+      "footer";
+  }
+  h1 {
+    font-size: 2.5em;
+  }
+  h2 {
+    font-size: 1.25em;
   }
 }
