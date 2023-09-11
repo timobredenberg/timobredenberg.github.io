@@ -76,7 +76,7 @@ footer {
 }
 
 .grid-container > div {
-  padding: 2em;
+  margin-right: 2em;
 }
 
 /* Arrange grid on mobile */
