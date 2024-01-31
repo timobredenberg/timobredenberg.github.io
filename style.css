@@ -2,15 +2,12 @@
   box-sizing: border-box;
 }
 
-html {
+body {
   background: url(intro.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-
-body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   color: #f1f1f1;
@@ -99,3 +96,11 @@ footer {
     font-size: 1.25em;
   }
 }
+
+
+
+@media all and (orientation:landscape) {
+  .grid-container{position: relative;
+    width: 100vw;
+  }}
+  
