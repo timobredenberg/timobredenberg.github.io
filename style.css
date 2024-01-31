@@ -97,10 +97,10 @@ footer {
   }
 }
 
-
-
-@media all and (orientation:landscape) {
-  .grid-container{position: relative;
+@media (max-height: 768px) and (orientation:landscape) {
+  .grid-container{
+    position: relative;
     width: 100vw;
-  }}
+  }
+}
   
