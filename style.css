@@ -10,7 +10,7 @@ body {
   background-size: cover;
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  color: #f1f1f1;
+  color: hsl(0, 0%, 95%);
   font-size: 16px;
   line-height: 1.5;
   word-wrap: normal;
@@ -103,4 +103,13 @@ footer {
     width: 100vw;
   }
 }
-  
+
+
+div .animate{
+  animation: fade 5s ease-in-out 1 alternate;
+}
+
+@keyframes fade {
+  0%   {color:hsla(0, 0%, 100%, 0); left:0px; top:0px;}
+  100% {color:hsla(0, 0%, 95%); left:0px; top:0px;}
+}
