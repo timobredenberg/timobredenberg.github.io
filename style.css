@@ -106,10 +106,18 @@ footer {
 
 
 div .animate{
-  animation: fade 5s ease-in-out 1 alternate;
+  animation: fade 3s ease-in-out 1 alternate;
 }
 
 @keyframes fade {
-  0%   {color:hsla(0, 0%, 100%, 0); left:0px; top:0px;}
-  100% {color:hsla(0, 0%, 95%); left:0px; top:0px;}
+  0%   { color:hsla(0, 0%, 100%, 0);
+    text-shadow: 0 0 50px #f1f1f1;
+    transform: rotateX(90deg);
+    
+  }
+        
+  100% { text-shadow: none;
+    transform-style: preserve-3d;
+  
+    }
 }
