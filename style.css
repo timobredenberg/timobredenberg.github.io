@@ -9,9 +9,9 @@ body {
   -o-background-size: cover;
   background-size: cover;
   margin: 0;
-  font-family: "Montserrat", sans-serif;
-  color: hsl(0, 0%, 95%);
-  font-size: 16px;
+  font-family: "EB Garamond", serif;
+  color: white;
+  font-size: 20px;
   line-height: 1.5;
   word-wrap: normal;
 }
@@ -35,15 +35,11 @@ a:visited {
   color: #cfbd91;
 }
 a:hover {
-  color: #fff;
+  color: white;
 }
 a:active {
-  color: #fff;
+  color: white;
 }
-
-/* Content */
-
-/* Grid */
 
 header {
   grid-area: header;
@@ -60,7 +56,6 @@ footer {
 }
 
 .grid-container {
-  /*background: rgba(0, 0, 0, 0.5);*/
   padding: 2%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -75,8 +70,6 @@ footer {
 .grid-container > div {
   margin-right: 2em;
 }
-
-/* Arrange grid on mobile */
 
 @media only screen and (max-width: 768px) {
   .grid-container {
@@ -96,19 +89,15 @@ footer {
     font-size: 1.25em;
   }
 }
-
 @media (max-height: 768px) and (orientation:landscape) {
   .grid-container{
     position: relative;
     width: 100vw;
   }
 }
-
-
-div .animate{
+.animate{
   animation: fade 3s ease-in-out 1 alternate;
 }
-
 @keyframes fade {
   0%   { color:hsla(0, 0%, 100%, 0);
     text-shadow: 0 0 50px #f1f1f1;
@@ -117,7 +106,6 @@ div .animate{
   }
         
   100% { text-shadow: none;
-    transform-style: preserve-3d;
-  
+    transform-style: preserve-3d; 
     }
 }
