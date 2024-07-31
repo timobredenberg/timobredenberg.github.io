@@ -3,17 +3,14 @@
 }
 
 body {
-  background: url(intro.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   margin: 0;
+  background-color: #444;
   font-family: "EB Garamond", serif;
   color: white;
   font-size: 20px;
   line-height: 1.5;
   word-wrap: normal;
+
 }
 
 h1 {
@@ -24,7 +21,19 @@ h1 {
 
 h2 {
   font-size: 2.5em;
+  line-height: 1em;
   text-decoration: none;
+}
+
+h3 {
+  font-size: 2em;
+  line-height: 1em;
+  text-decoration: none;
+}
+
+.highlight{
+  color: #cfbd91;
+  font-weight: bold;
 }
 
 a:link {
@@ -40,6 +49,13 @@ a:hover {
 a:active {
   color: white;
 }
+
+img {  
+  width: 100%;
+  height: auto;
+}
+
+img.logo{width: 300px;}
 
 header {
   grid-area: header;
@@ -67,6 +83,14 @@ footer {
     "footer footer footer";
 }
 
+.grid-container-article {
+  padding: 2%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "content1 content2 content3"
+}
+
 .grid-container > div {
   margin-right: 2em;
 }
@@ -88,6 +112,9 @@ footer {
   h2 {
     font-size: 1.25em;
   }
+  h3 {
+    font-size: 1em;
+  }
 }
 @media (max-height: 768px) and (orientation:landscape) {
   .grid-container{
@@ -108,4 +135,15 @@ footer {
   100% { text-shadow: none;
     transform-style: preserve-3d; 
     }
+}
+
+@media print {
+  .grid-container-article {
+    padding: 2%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      "content1"
+  }
+
 }
