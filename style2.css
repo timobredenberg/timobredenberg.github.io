@@ -1,0 +1,6 @@
+/*Additional stylesheet for articles which overrides background image*/
+
+body {
+   background: none;
+   background-color: #444;
+}
