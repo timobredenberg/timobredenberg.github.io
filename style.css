@@ -53,6 +53,10 @@ a:active {
   color: white;
 }
 
+li{
+  list-style-type: "- ";
+}
+
 img {  
   width: 100%;
   height: auto;
